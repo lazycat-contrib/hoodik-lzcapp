@@ -1,24 +1,16 @@
-lzc-sdk-version: "0.1"
-name: hoodik
-package: cloud.lazycat.app.hoodik
-version: 1.5.1
-description: 轻量级、安全且易于自建的云存储解决方案
-homepage: https://github.com/hudikhq/hoodik
-author: hudikhq
 application:
   subdomain: hoodik
   background_task: true
   multi_instance: false
-  gpu_accel: false
-  kvm_accel: false
-  usb_accel: false
   public_path:
     - /
-  routes:
-    - /=http://hoodik:5443/
+  upstreams:
+    - location: /
+      backend: http://hoodik:5443/
 services:
   hoodik:
-    image: docker.hlmirror.com/hudik/hoodik:v1.5.1
+    # upstream: hudik/hoodik:v1.5.1
+    image: hudik/hoodik:v1.5.1
     environment:
       - APP_URL=https://${LAZYCAT_APP_DOMAIN}
       - DATA_DIR=/data
