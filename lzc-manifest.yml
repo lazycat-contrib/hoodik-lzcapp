@@ -9,8 +9,8 @@ application:
       backend: http://hoodik:5443/
 services:
   hoodik:
-    # upstream: hudik/hoodik:v2.5.2
-    image: registry.lazycat.cloud/czyt/hudik/hoodik:4f12300cc22c3846
+    # upstream: hudik/hoodik:v2.5.5
+    image: registry.lazycat.cloud/czyt/hudik/hoodik:0abb5d95f9e496d8
     environment:
       - APP_URL=https://${LAZYCAT_APP_DOMAIN}
       - DATA_DIR=/data

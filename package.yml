@@ -1,5 +1,5 @@
 package: cloud.lazycat.app.hoodik
-version: 2.5.2
+version: 2.5.5
 name: hoodik
 description: "轻量级、安全且易于自建的云存储解决方案"
 min_os_version: "1.5.0"
