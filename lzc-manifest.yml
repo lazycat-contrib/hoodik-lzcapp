@@ -10,7 +10,7 @@ application:
 services:
   hoodik:
     # upstream: hudik/hoodik:v2.5.6
-    image: registry.lazycat.cloud/czyt/hudik/hoodik:67a2b47ad1a1e5d9
+    image: docker.1ms.run/hudik/hoodik:v2.5.6
     environment:
       - APP_URL=https://${LAZYCAT_APP_DOMAIN}
       - DATA_DIR=/data
